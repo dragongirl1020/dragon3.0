@@ -1154,7 +1154,7 @@ window.__require = function e(t, n, o) {
                     var t = this,
                         n = cc.instantiate(this.fruitPre);
                     n.parent = this.lineNode, n.getComponent(cc.Sprite).spriteFrame = d.default.Instance.fruit[e], n.children[0].getComponent(cc.Sprite).spriteFrame = d.default.Instance.fruit[e], n.getComponent("fruitData").fruitNumber = e, n.position = this.lineNode.children[1].position, n.scale = 0, n.getComponent(cc.RigidBody).type = cc.RigidBodyType.Static, n.getComponent(cc.PhysicsCircleCollider).radius = 0, 
-					n.getComponent(cc.PhysicsCircleCollider).restitution = 0.3,	
+					n.getComponent(cc.PhysicsCircleCollider).restitution = 0.1,	
 					n.getComponent(cc.PhysicsCircleCollider).apply(), cc.tween(n).to(.5, {
                         scale: 1
                     }, {
@@ -3335,7 +3335,7 @@ window.__require = function e(t, n, o) {
                     var t = this;
                     if (this.node.x < -this.bianjieX && (this.node.x = -this.bianjieX), this.node.x > this.bianjieX && (this.node.x = this.bianjieX), this.notTargetTime += e, this.returnNumber && (this.scheduleOnce(function() {
                             t.getNumberTime = 0
-                        }, .25), this.returnNumber = !1), "fruitNode" == this.node.parent.name && (this.testEndDJS += e), this.node.y + this.node.width / 2 > cc.find("Canvas/lineNode").children[0].y && 0 == this.pengzhuangCount && this.endCtrl && 0 == this.endOne && this.testEndDJS > 3 && false) {
+                        }, .25), this.returnNumber = !1), "fruitNode" == this.node.parent.name && (this.testEndDJS += e), this.node.y + this.node.width / 2 > cc.find("Canvas/lineNode").children[0].y && 0 == this.pengzhuangCount && this.endCtrl && 0 == this.endOne && this.testEndDJS > 3 && true) {
                         a.default.GameUpdateCtrl = !1, a.default.playerTouch = !1;
                         for (var n = 0; n < cc.find("Canvas/fruitNode").children.length; n++) cc.find("Canvas/fruitNode").children[n].removeComponent(cc.PhysicsCircleCollider), cc.find("Canvas/fruitNode").children[n].removeComponent(cc.RigidBody);
                         this.node.color = cc.Color.RED, cc.tween(this.node).to(.3, {
